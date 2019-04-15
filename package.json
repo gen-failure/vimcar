@@ -13,11 +13,20 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest --verbose",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "jest": {
+    "rootDir": ".",
+    "testMatch": [
+      "**/__tests__/*.js"
+    ],
+    "transform": {
+      ".*": "<rootDir>/node_modules/babel-jest"
+    }
   },
   "browserslist": [
     ">0.2%",
