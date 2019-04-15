@@ -27,7 +27,6 @@ class CartStore {
           } else {
             this.items.push({id, amount: 1});
           }
-          console.log(this.items);
         })
         this.stores.toaster.addToast("Stock successfully reserved");
         break;
