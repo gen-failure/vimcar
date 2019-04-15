@@ -1,6 +1,9 @@
 import React from 'react';
+
 import Products from './Products';
 import Toolbar from './Toolbar';
+import Toaster from './Toaster';
+
 class Shop extends React.Component {
 
   render() {
@@ -8,6 +11,7 @@ class Shop extends React.Component {
       <div className="shopComponent" style={{width: '100%'}}>
         <Toolbar />
         <Products />
+        <Toaster />
       </div>
     );
   }

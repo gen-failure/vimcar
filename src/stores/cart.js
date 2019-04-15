@@ -29,16 +29,16 @@ class CartStore {
           }
           console.log(this.items);
         })
-        window.alert('Stock successfully reserved');
+        this.stores.toaster.addToast("Stock successfully reserved");
         break;
       }
       case 418: {
-        window.alert('Failed to reserve item. Out of stock');
+        this.stores.toaster.addToast('Failed to reserve item. Out of stock', 'warn');
 
         break;
       }
       default: {
-        window.alert('Something went wrong');
+        this.stores.toaster.addToast('Something went wrong', 'error');
       }
     }
   }

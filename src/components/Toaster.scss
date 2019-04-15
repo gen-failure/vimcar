@@ -1,0 +1,39 @@
+$toastColors: (
+  success: #33ff00,
+  warn: #ff7f00,
+  error: #ff0000
+);
+
+div.toasterComponent {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  right: 1em;
+  padding: 1em;
+  width: 350px;
+
+  div.toast {
+    padding: 0.75em 2em;
+    color: white;
+    margin: 0 0.5em;
+    border: solid 0.1em black;
+
+    @each $level, $color in $toastColors {
+      &[data-level="#{$level}"] {
+        background-color: $color;
+        border-color: darken($color, 10%);
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0 0;
+    div.toast {
+      margin: 0.1em 0;
+      width: 100%;
+    }
+  }
+}
