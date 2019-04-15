@@ -1,6 +1,8 @@
 import React from 'react';
 import {inject, observer} from 'mobx-react';
 
+import ProductImage from './ProductImage';
+
 import './Product.scss';
 
 @inject('cart')
@@ -10,7 +12,7 @@ class Product extends React.Component {
      return (
       <div className="productComponent">
         <div className="productImage">
-          <img src={`/assets/${this.props.id}.png`} alt={this.props.title} /> 
+          <ProductImage id={this.props.id} />
           <div className="cartOverlay">
             <button onClick={() => {this.props.cart.addProduct(this.props.id)}}>Add to Cart</button>
           </div>
