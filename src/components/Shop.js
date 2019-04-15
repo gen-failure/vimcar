@@ -1,23 +1,12 @@
-import React, {Component} from 'react';
-import {inject, observer} from 'mobx-react';
-
-@inject('products')
-@observer
-class Shop extends Component {
-
-  componentDidMount() {
-    this.props.products.getProducts();
-  }
+import React from 'react';
+import Products from './Products';
+class Shop extends React.Component {
 
   render() {
     return (
-      <div className="Shop Component">
+      <div className="shopComponent" style={{width: '100%'}}>
         <h1>Coming soon!</h1>
-        <ul>
-          {this.props.products.items.map((item) => {
-            return <li key={item.id}>{item.title}</li>
-          })}
-        </ul>
+        <Products />
       </div>
 
     );

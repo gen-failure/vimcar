@@ -15,7 +15,7 @@ const products = [
   },
   {
     title: "42mm Silver Aluminium Case with Scuba Blue Woven Nylon",
-    id: "s42si-nssb-sel-20160"
+    id: "s42si-nssb-sel-201603"
   },
   {
     title: "Double Tour, 38mm Stainless Steel Case with Etain Leather Band",

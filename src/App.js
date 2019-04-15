@@ -6,6 +6,8 @@ import ProductsStore from './stores/products';
 
 import Shop from './components/Shop';
 
+import 'flexboxgrid2/flexboxgrid2.css';
+
 const stores = {
   cart: new CartStore(),
   products: new ProductsStore()

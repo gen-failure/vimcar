@@ -7,6 +7,7 @@
     "mobx-react": "^5.4.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-flexbox-grid": "^2.1.2",
     "react-scripts-rewired": "2.1.8"
   },
   "scripts": {
@@ -26,6 +27,7 @@
   ],
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.4.0",
-    "copy-webpack-plugin": "^5.0.2"
+    "copy-webpack-plugin": "^5.0.2",
+    "node-sass": "^4.11.0"
   }
 }
