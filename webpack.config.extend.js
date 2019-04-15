@@ -13,7 +13,16 @@
  *
  */
 
+const CopyPlugin = require('copy-webpack-plugin');
+
 module.exports = (webpackConfig, env, { paths }) => {
-    // here you can extend your webpackConfig at will
-    return webpackConfig
+  webpackConfig.plugins.push(
+    new CopyPlugin([
+      {
+        from: 'assets',
+        to: 'assets'
+      }
+    ])
+  );
+  return webpackConfig
 }
