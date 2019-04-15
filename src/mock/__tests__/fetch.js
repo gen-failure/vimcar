@@ -109,7 +109,8 @@ describe('fetch', () => {
         expect(response.json).toThrow()
       })
     })
-  })
+  });
+
   describe('https://example.com/-/v1/stock/products', () => {
     describe('success', () => {
       const setup = async () => {
@@ -151,36 +152,6 @@ describe('fetch', () => {
       it('should return a 500 status code', async () => {
         const response = await setup()
         expect(response.status).toBe(500)
-      })
-
-      it('should not return abody', async () => {
-        const response = await setup()
-        expect(response.json).toThrow()
-      })
-    })
-
-    describe('out of stock', () => {
-      const setup = async () => {
-        mockRandom(0.15)
-        return await fetch(
-          'https://example.com/-/v1/stock/reserve',
-          { method: 'POST' }
-        )
-      }
-
-      it('should be an unsuccessful response', async () => {
-        const response = await setup()
-        expect(response.ok).toBe(false)
-      })
-
-      it('should return a 418 status code', async () => {
-        const response = await setup()
-        expect(response.status).toBe(418)
-      })
-
-      it('should not return a body', async () => {
-        const response = await setup()
-        expect(response.json).toThrow()
       })
     })
   })
