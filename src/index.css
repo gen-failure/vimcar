@@ -24,6 +24,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   background-color: #f0f1f2;
+  background: -moz-linear-gradient(-45deg, #ffffff 0%, #f0f1f2 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #ffffff 0%,#f0f1f2 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #ffffff 0%,#f0f1f2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f0f1f2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 body, html, #root {

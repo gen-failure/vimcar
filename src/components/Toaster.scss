@@ -18,6 +18,7 @@ div.toasterComponent {
     color: white;
     margin: 0 0.5em;
     border: solid 0.1em black;
+    font-weight: bold;
 
     @each $level, $color in $toastColors {
       &[data-level="#{$level}"] {
