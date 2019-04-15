@@ -48,7 +48,7 @@ responses[`GET:${apiBaseUrl}/stock/products`] = () => {
   } else {
     return Promise.resolve({
       ok: true,
-      status: 204,
+      status: 200,
       json: () => {
         return products;
       },
