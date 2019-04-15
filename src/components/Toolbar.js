@@ -1,10 +1,13 @@
 import React from 'react';
+import {inject, observer} from 'mobx-react';
 
 import vimcarLogo from './images/vimcar-logo.svg';
 import cartIcon from './images/cart.svg';
 
 import './Toolbar.scss';
 
+@inject('cart')
+@observer
 class Toolbar extends React.Component {
   render() {
     return (
@@ -14,7 +17,7 @@ class Toolbar extends React.Component {
         </div>
         <div className="cartIcon">
           <img src={cartIcon} alt="" />
-          <span className="pill">0</span>
+          <span className="pill">{this.props.cart.itemsLength}</span>
         </div>
       </header>
     )
