@@ -1,3 +1,5 @@
+import {apiBaseUrl} from '../appConfig';
+
 const products = [
   {
     title: "42mm Space Gray Aluminium Case with Black Woven Nylon",
@@ -31,28 +33,27 @@ const products = [
     title: "Double Tour, 48mm Stainless Steel Case with Noir Leather Band",
     id: "h42ss-stbk-sel-201603"
   },
-
 ]
-
-export default {
-  'GET:https://example.com/-/v1/stock/products': () => {
-    const responseFactor = Math.random()
-    if (responseFactor < 0.05) {
-      return Promise.resolve({
-        ok: false,
-        status: 500,
-        json: () => {
-          throw new Error('Empty Response')
-        },
-      })
-    } else {
-      return Promise.resolve({
-        ok: true,
-        status: 204,
-        json: () => {
-          return products;
-        },
-      })
-    }
+const responses = {};
+responses[`GET:${apiBaseUrl}/stock/products`] = () => {
+  const responseFactor = Math.random()
+  if (responseFactor < 0.05) {
+    return Promise.resolve({
+      ok: false,
+      status: 500,
+      json: () => {
+        throw new Error('Empty Response')
+      },
+    })
+  } else {
+    return Promise.resolve({
+      ok: true,
+      status: 204,
+      json: () => {
+        return products;
+      },
+    })
   }
 }
+
+export default responses;
