@@ -16,6 +16,12 @@
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = (webpackConfig, env, { paths }) => {
+  //Add babel decorators plugin
+  webpackConfig.module.rules[2].oneOf[1].options.plugins.push([
+    "@babel/plugin-proposal-decorators", {
+      legacy: true
+    }
+  ]);
   webpackConfig.plugins.push(
     new CopyPlugin([
       {

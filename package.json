@@ -23,6 +23,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.4.0",
     "copy-webpack-plugin": "^5.0.2"
   }
 }
