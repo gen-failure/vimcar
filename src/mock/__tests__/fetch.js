@@ -1,14 +1,6 @@
 import fetch from '../fetch';
+import mockRandom from '../mockRandom';
 
-const mockRandom = (n) => {
-  const realRandom = Math.random
-
-  Math.random = () => n
-
-  return () => {
-    Math.random = realRandom
-  }
-}
 
 describe('fetch', () => {
   describe('not found', () => {
@@ -156,3 +148,5 @@ describe('fetch', () => {
     })
   })
 })
+
+export {mockRandom} 
