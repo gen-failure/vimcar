@@ -14,7 +14,7 @@ class ProductsStore {
         this.items = query.json();
       });
     } catch(error) {
-      //FIXME Do something
+      this.stores.toaster.addToast('Failed to retrive product data from server, please try again', 'error');
     }
   
   }
