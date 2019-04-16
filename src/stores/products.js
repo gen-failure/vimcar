@@ -10,7 +10,6 @@ class ProductsStore {
     try {
       let query = await fetch(`${apiBaseUrl}/stock/products`);
       runInAction(() => {
-        console.log(query);
         this.items = query.json();
       });
     } catch(error) {
