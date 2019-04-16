@@ -26,8 +26,8 @@
       ".*": "<rootDir>/node_modules/babel-jest"
     },
     "moduleNameMapper": {
-    "\\.(css|scss|svg)$": "<rootDir>/src/__tests__/_empty_module.js"
-  }
+      "\\.(css|scss|svg)$": "<rootDir>/src/__tests__/_empty_module.js"
+    }
   },
   "browserslist": [
     ">0.2%",
