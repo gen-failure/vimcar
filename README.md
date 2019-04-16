@@ -1,68 +1,30 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Vimcar coding challange implementation
 
-## Available Scripts
+Original task: https://github.com/vimcar/frontend-challenge/
 
-In the project directory, you can run:
+### How to start
 
-### `npm start`
+* clone the repository
+* `npm install`
+* `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### How it works
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Solution is based on [react-scripts-rewired](https://github.com/marcopeg/create-react-app/blob/master/packages/react-scripts/README.md). Custom webpack/babel configuration is used to enable es7 mobx compatible
+decorators and to copy mock product images.
 
-### `npm test`
+*Mock API* is based on example code provided together with task. New API endpoint was added for downloading products data.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Because the original task required implementation of specific design, I reduces the usage of external css libraries only to *Flexbox Grid*. I believe that I successfully kept the design concept of the original task. Exact metricts might be slightly different, but it should not break the whole layout. Also I had a trouble to identify font used in _Shop.png_ file.
 
-### `npm run build`
+Having alayout prototype in something like [UXPin](https://www.uxpin.com/) would make the design implementation much easier.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The design should be responsive with support of high DPI displays (Retina etc.)
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+A very simple alert system was implemented. The design of alert system is trival, but sufficient for functional demo.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Testing
 
-### `npm run eject`
+While the testing was not included in requirements, I setup basic testing environment and provided few simple tests as a proof of concept. These tests are *not* supposed to cover 100% of the application, they serve only as a technological demo.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Tests can be executed by running `npm run test`.
