@@ -1,6 +1,6 @@
 import CartStore from '../cart';
 import ToasterStore from '../toaster';
-import mockRandom from '../../mock/mockRandom';
+import mockRandom from '../../mock/__tests__/_mockRandom';
 
 const getStore = () => {
   let store = new CartStore();

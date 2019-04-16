@@ -1,6 +1,5 @@
 import fetch from '../fetch';
-import mockRandom from '../mockRandom';
-
+import mockRandom from './_mockRandom';
 
 describe('fetch', () => {
   describe('not found', () => {
